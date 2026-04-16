@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rocket League - Présentation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f172a, #111827, #1e3a8a);
+      color: white;
+      line-height: 1.6;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.35);
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(8px);
+      z-index: 10;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    nav h1 {
+      font-size: 1.4rem;
+      color: #facc15;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #facc15;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
+        url('https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #facc15;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #facc15;
+      color: #111827;
+      padding: 12px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: #fde047;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 25px;
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .card h3 {
+      color: #facc15;
+      margin-bottom: 10px;
+    }
+
+    .gameplay {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .gameplay img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .list {
+      margin-top: 15px;
+      padding-left: 20px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 25px;
+      background: rgba(0,0,0,0.35);
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .highlight {
+      color: #facc15;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+
+      .gameplay {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav ul {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>Rocket League</h1>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#presentation">Présentation</a></li>
+        <li><a href="#gameplay">Gameplay</a></li>
+        <li><a href="#modes">Modes</a></li>
+        <li><a href="#contact">Infos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="accueil">
+    <div class="hero-content">
+      <h2>Bienvenue dans l’univers de Rocket League</h2>
+      <p>
+        Un mélange explosif entre football, voitures boostées et compétitions intenses.
+        Marque des buts, fais des figures et domine l’arène !
+      </p>
+      <a href="#presentation" class="btn">Découvrir le jeu</a>
+    </div>
+  </section>
+
+  <section id="presentation">
+    <h2>Présentation du jeu</h2>
+    <p>
+      Rocket League est un jeu de sport automobile où des voitures propulsées par des fusées
+      s’affrontent dans des arènes pour marquer des buts. Il est connu pour son gameplay rapide,
+      son côté compétitif et sa communauté très active [web:1][web:3].
+    </p>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Développement</h3>
+        <p>Créé par Psyonix, Rocket League est sorti en 2015 et est devenu un grand succès mondial [web:1].</p>
+      </div>
+      <div class="card">
+        <h3>Style de jeu</h3>
+        <p>Le but est simple : marquer plus de buts que l’équipe adverse avant la fin du match [web:1].</p>
+      </div>
+      <div class="card">
+        <h3>Multijoueur</h3>
+        <p>Le jeu peut se jouer seul, en local ou en ligne, avec du cross-play entre plusieurs plateformes [web:1][web:3].</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gameplay">
+    <h2>Gameplay</h2>
+    <div class="gameplay">
+      <div>
+        <p>
+          Les matchs durent en général cinq minutes. Si les deux équipes sont à égalité,
+          une prolongation en mort subite peut décider du vainqueur [web:1][web:4].
+        </p>
+        <ul class="list">
+          <li>Contrôle de voitures boostées.</li>
+          <li>Travail d’équipe et réflexes rapides.</li>
+          <li>Possibilité de jouer en 1v1, 2v2, 3v3 ou 4v4 [web:1].</li>
+          <li>Progression en mode classé avec différents rangs [web:1].</li>
+        </ul>
+      </div>
+      <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80" alt="Voiture de course dans un univers gaming">
+    </div>
+  </section>
+
+  <section id="modes">
+    <h2>Modes de jeu</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Casual</h3>
+        <p>Mode détente pour jouer sans pression et s’amuser entre amis.</p>
+      </div>
+      <div class="card">
+        <h3>Compétitif</h3>
+        <p>Mode classé où chaque victoire ou défaite influence ton rang [web:1][web:5].</p>
+      </div>
+      <div class="card">
+        <h3>Modes spéciaux</h3>
+        <p>Le jeu propose aussi des modes comme Hoops, Rumble, Snow Day ou Dropshot [web:5][web:8].</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Infos rapides</h2>
+    <div class="card">
+      <p><span class="highlight">Plateformes :</span> PC, PlayStation, Xbox et Nintendo Switch [web:3][web:6].</p>
+      <p><span class="highlight">Genre :</span> Sport / Course / Multijoueur.</p>
+      <p><span class="highlight">Particularité :</span> Jeu free-to-play depuis 2020 [web:1].</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Site de présentation Rocket League - HTML, CSS et contenu complet.</p>
+  </footer>
+
+</body>
+</html>
